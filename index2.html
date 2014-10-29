@@ -10,15 +10,15 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap2.css">
         <style>
             body {
                 padding-top: 50px;
                 padding-bottom: 20px;
             }
         </style>
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/main.css">
+        <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+        <!-- <link rel="stylesheet" href="css/main.css"> -->
 
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
@@ -41,34 +41,18 @@
           <a class="navbar-brand" href="#">JUBILEUS</a>
         </div>
         <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Senha" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Entrar</button>
-          </form>
+          
         </div><!--/.navbar-collapse -->
-      </div>
-    </div>
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Olá, cliente!</h1>
-        <p>Há anos no mercado imobiliário de Natal, Jubileus Imóveis iniciou sua trajetória em 1.986, oferecendo uma excelente estrutura administrativa, assessoria exclusiva possibilitando negociações ágeis e seguras.</p>
       </div>
     </div>
 
     <div class="container">
       <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4" ng-repeat="item in json">
+      <div class="row" ng-repeat="item in json">
+        <div class="col-md-4">
           <h2>{{item.description}}</h2>
           <p><img src={{item.main_picture}} class="img-thumbnail" alt="A generic square placeholder image."></P>
-          <p><a class="btn btn-default" href="#" role="button">Ver detalhes &raquo;</a></p>
+          <p><a class="btn btn-success" href="#" role="button">Ver detalhes &raquo;</a></p>
         </div>
       </div>
 
