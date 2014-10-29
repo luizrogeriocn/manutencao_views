@@ -1,4 +1,5 @@
-var json = [
+var json;
+var items = [
 	{
 		id: 1,
 		description: "Casa em ponta negra",
@@ -65,6 +66,14 @@ var json = [
 ];
 
 angular.module('app', [])
-.controller('jubileus', function($scope) {
-    $scope.json = json; 
+.controller('jubileus', function($scope, $http) {
+	$http.get('localhost:3000/real_states.json')
+				.success(function(data) {
+					json = data;
+				})
+				.error(function(data) {
+					console.log('Error: ' + data);
+				});
+
+    $scope.json = (json || items); 
 });
