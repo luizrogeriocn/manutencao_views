@@ -67,7 +67,7 @@ var items = [
 
 angular.module('app', [])
 .controller('jubileus', function($scope, $http) {
-	$http.get('localhost:3000/real_states.json')
+	$http.get('http://localhost:3000/real_states.json')
 				.success(function(data) {
 					json = data;
 				})
