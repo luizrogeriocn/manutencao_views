@@ -69,7 +69,7 @@ angular.module('app', [])
 .controller('jubileus', function($scope, $http) {
 	$http.get('http://localhost:3000/real_states.json')
 				.success(function(data) {
-					json = data;
+					scope.json = data;
 				})
 				.error(function(data) {
 					console.log('Error: ' + data);
